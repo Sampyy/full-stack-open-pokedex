@@ -46,7 +46,7 @@ jobs:
         if: failure()
         with:
           severity: error
-          details: Commit ${{ github.event.commits.url }} by ${{ github.event.commits.committer }} broke something
+          details: Commit ${{ github.event.commits.url }} by ${{ github.event.commits.author }} broke something
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
 
   tag_releases:
